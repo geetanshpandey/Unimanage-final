@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Price 999",
+    "price": 999,
+    "description": ["Monthly", "Unlimited"],
+    "category": "men's clothing",
+    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    "rating": {
+      "rate": 3.9,
+      "count": 120
+    }
+  },
+  {
+    "id": 2,
+    "title": "Price 9999",
+    "price": 9999,
+    "description": ["Yearly", "Unlimited"],
+    "category": "men's clothing",
+    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    "rating": {
+      "rate": 3.9,
+      "count": 120
+    }
+  }
+]
