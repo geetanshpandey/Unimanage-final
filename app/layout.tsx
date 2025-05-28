@@ -7,6 +7,7 @@ import {
 } from "@clerk/nextjs";
 import "./globals.css";
 import PageHeader from "@/components/page-header";
+import Footer from "@/components/footer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -26,6 +27,7 @@ export default function RootLayout({
           <PageHeader />
           {children}
         </body>
+        <Footer/>
       </html>
     </ClerkProvider>
   );

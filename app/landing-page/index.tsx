@@ -2,7 +2,7 @@ import PricingSection from './pricing-section';
 
 const LandingPage = () => {
   return (
-    <div>
+    <div className='bg-black'>
       <PricingSection />
     </div>
   );

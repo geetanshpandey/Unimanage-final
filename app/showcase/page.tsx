@@ -1,42 +1,130 @@
-import React from "react";
+"use client";
 
-const page = () => {
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import mainImage from "@/public/—Pngtree—purple swirling flash light effect_6487386.png"
+
+const categories = [
+  {
+    title: "FINANCES",
+    items: [
+      { name: "BillPro", href: "/finance/billpro" },
+      { name: "Pennywise", href: "/finance/pennywise" },
+      { name: "Save bills", href: "/finance/save-bills" },
+    ],
+  },
+  {
+    title: "SALES",
+    items: [
+      { name: "Total Sales", href: "/sales/total" },
+      { name: "Invoice Sales", href: "/sales/invoice" },
+      { name: "Agency Sales", href: "/sales/agency" },
+    ],
+  },
+  {
+    title: "WEBSITES",
+    items: [
+      { name: "Website Builder", href: "/websites/builder" },
+      { name: "Website Editor", href: "/websites/editor" },
+      { name: "Domain", href: "/websites/domain" },
+    ],
+  },
+  {
+    title: "SUPPLY CHAIN",
+    items: [
+      { name: "Stockify", href: "/supply/stockify" },
+      { name: "Teams", href: "/supply/teams" },
+      { name: "Tasktitan", href: "/supply/tasktitan" },
+    ],
+  },
+  {
+    title: "HUMAN RESOURCES",
+    items: [
+      { name: "Admin", href: "/hr/admin" },
+      { name: "Teamtrack", href: "/hr/teamtrack" },
+      { name: "Departments", href: "/hr/departments" },
+    ],
+  },
+  {
+    title: "AUTOMATION",
+    items: [
+      { name: "Financeflow", href: "/automation/financeflow" },
+      { name: "Socially", href: "/automation/socially" },
+      { name: "Neosite", href: "/automation/neosite" },
+    ],
+  },
+  {
+    title: "SERVICES",
+    items: [
+      { name: "Pipelines", href: "/services/pipelines" },
+      { name: "Calendly", href: "/services/calendly" },
+      { name: "Connecto", href: "/services/connecto" },
+    ],
+  },
+  {
+    title: "PRODUCTIVITY",
+    items: [
+      { name: "Journalize", href: "/productivity/journalize" },
+      { name: "Quickchat", href: "/productivity/quickchat" },
+      { name: "Pixel", href: "/productivity/pixel" },
+    ],
+  },
+];
+
+const FeaturesGrid = () => {
   return (
-    <div className="ml-12">
-      <div className="font-bold text-rose-600">FINANCE</div>
-      <div className="text-indigo-600">Billpro</div>
-      <div className="text-indigo-600">Pennywise</div>
-      <div className="text-indigo-600">Save bills</div>
-      <div className="font-bold text-rose-600">SALES</div>
-      <div className="text-indigo-600">Total Sales</div>
-      <div className="text-indigo-600">Invoice Sales</div>
-      <div className="text-indigo-600">Agency Sales</div>
-      <div className="font-bold text-rose-600">WEBSITE</div>
-      <div className="text-indigo-600">Website Builder</div>
-      <div className="text-indigo-600">Websiste Editor</div>
-      <div className="text-indigo-600">Domain</div>
-      <div className="font-bold text-rose-600">SUPPLY CHAIN</div>
-      <div className="text-indigo-600">Stockify</div>
-      <div className="text-indigo-600">Teams</div>
-      <div className="text-indigo-600">Tasktitan</div>
-      <div className="font-bold text-rose-600">HUMAN RESOURCE</div>
-      <div className="text-indigo-600">Admin</div>
-      <div className="text-indigo-600">Teamtrack</div>
-      <div className="text-indigo-600">Departments</div>
-      <div className="font-bold text-rose-600">AUTOMATION</div>
-      <div className="text-indigo-600">Neosite</div>
-      <div className="text-indigo-600">Socially</div>
-      <div className="text-indigo-600">FinanceFlow</div>
-      <div className="font-bold text-rose-600">SERVICES</div>
-      <div className="text-indigo-600">Pipelines</div>
-      <div className="text-indigo-600">Calendlly</div>
-      <div className="text-indigo-600">Connecto</div>
-      <div className="font-bold text-rose-600">PRODUCTIVITY</div>
-      <div className="text-indigo-600">Quickchat</div>
-      <div className="text-indigo-600">Pixel</div>
-      <div className="text-indigo-600">JOurnalize</div>
+    <div>
+      <section className="py-16 bg-black flex items-center justify-center -mt-4">
+      <div className="bg-[#1a1a1a] rounded-2xl px-8 py-14 max-w-3xl w-full flex flex-col md:flex-row items-center justify-between gap-12">
+        
+        {/* Left Content */}
+        <div className="text-white max-w-lg space-y-5">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+            Business<br />
+            Management<br />
+            Assistant
+          </h1>
+          <p className="text-gray-300 text-base md:text-lg">
+            All your business on one platform. Simple, efficient, yet affordable!
+          </p>
+          <button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-md font-medium transition duration-300">
+            Get Started
+          </button>
+        </div>
+
+        {/* Right Image */}
+        <div className="w-full md:w-2/5">
+          <Image
+            src={mainImage}
+            alt="Purple swirl art"
+            width={400}
+            height={400}
+            className="w-full h-auto object-contain"
+          />
+        </div>
+      </div>
+    </section>
+    <div className="min-h-screen bg-black text-white flex items-center justify-center p-8 pt-1 -mt-40">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-12 text-left max-w-6xl w-full">
+        {categories.map((section, idx) => (
+          <div key={idx}>
+            <h3 className="text-purple-400 font-bold mb-2">{section.title}</h3>
+            <ul className="space-y-1 text-white">
+              {section.items.map((item, itemIdx) => (
+                <li key={itemIdx}>
+                  <Link href={item.href} className="hover:text-purple-400 transition">
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
     </div>
   );
 };
 
-export default page;
+export default FeaturesGrid;

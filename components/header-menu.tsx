@@ -30,13 +30,13 @@ const HeaderMenu = () => {
   return (
     <DropdownMenu open={open} onOpenChange={toggleMenu}>
       <DropdownMenuTrigger asChild>
-        <Button onClick={toggleMenu} className="mr-4" variant="secondary">
-          {open ? (
-            <X className="h-6 w-6 cursor-pointer" />
-          ) : (
-            <Menu className="h-6 cursor-pointer w-6" />
-          )}
-        </Button>
+      <Button onClick={toggleMenu} className="mr-4 bg-transparent text-white hover:bg-transparent hover:text-gray-200" variant="secondary">
+        {open ? (
+          <X className="h-8 w-8 cursor-pointer" />
+        ) : (
+          <Menu className="h-12 w-12 cursor-pointer" />
+        )}
+      </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
         <DropdownMenuItem asChild>
@@ -61,12 +61,6 @@ const HeaderMenu = () => {
           <Link href="/pricing" className="flex">
             <BadgeDollarSign className="mr-2 h-4 w-4" />
             <span>Pricing</span>
-          </Link>
-        </DropdownMenuItem>
-        <DropdownMenuItem asChild>
-          <Link href="/blog" className="flex">
-            <MessageCircle className="mr-2 h-4 w-4" />
-            <span>Blog</span>
           </Link>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
