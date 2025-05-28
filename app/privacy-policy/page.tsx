@@ -1,6 +1,6 @@
 export default function PrivacyPolicy() {
     return (
-      <div className="max-w-4xl mx-auto px-6 py-10 text-neutral-900">
+      <div className="max-w-4xl mx-auto px-6 py-10 text-neutral-900 h-screen">
         <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>
         <p className="mb-4">
           UNIMANAGE values your privacy. We collect minimal data only for

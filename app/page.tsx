@@ -276,7 +276,7 @@ export default function Home() {
     <ToolIntegration/>
     <FaqSection/>
     <section className="py-16 bg-gradient-to-b from-[#111111] to-black flex items-center justify-center pb-20">
-      <div className="bg-[#1a1a1a] rounded-2xl px-8 py-14 max-w-4xl w-full flex flex-col md:flex-row items-center justify-between gap-12">
+      <div className="bg-[#1a1a1a] rounded-2xl px-8 py-14 max-w-5xl w-full flex flex-col md:flex-row items-center justify-between gap-12">
         
         {/* Left Content */}
         <div className="text-white max-w-lg space-y-5">

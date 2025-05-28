@@ -76,7 +76,7 @@ const FeaturesGrid = () => {
   return (
     <div>
       <section className="py-16 bg-black flex items-center justify-center -mt-4">
-      <div className="bg-[#1a1a1a] rounded-2xl px-8 py-14 max-w-3xl w-full flex flex-col md:flex-row items-center justify-between gap-12">
+      <div className="bg-[#1a1a1a] rounded-2xl px-8 py-14 max-w-5xl w-full flex flex-col md:flex-row items-center justify-between gap-12">
         
         {/* Left Content */}
         <div className="text-white max-w-lg space-y-5">
@@ -109,11 +109,11 @@ const FeaturesGrid = () => {
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-12 text-left max-w-6xl w-full">
         {categories.map((section, idx) => (
           <div key={idx}>
-            <h3 className="text-purple-400 font-bold mb-2">{section.title}</h3>
+            <h3 className="text-purple-400 font-bold mb-2 text-2xl">{section.title}</h3>
             <ul className="space-y-1 text-white">
               {section.items.map((item, itemIdx) => (
                 <li key={itemIdx}>
-                  <Link href={item.href} className="hover:text-purple-400 transition">
+                  <Link href={item.href} className="hover:text-purple-400 transition text-xl">
                     {item.name}
                   </Link>
                 </li>

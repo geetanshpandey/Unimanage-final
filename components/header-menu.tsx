@@ -38,33 +38,33 @@ const HeaderMenu = () => {
         )}
       </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56">
+      <DropdownMenuContent className="w-56 bg-black">
         <DropdownMenuItem asChild>
-          <Link href="/" className="flex">
+          <Link href="/" className="flex bg-black text-white">
             <Folder className="mr-2 h-4 w-4" />
             <span>Home</span>
           </Link>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
-          <Link href="/howitworks" className="flex">
+          <Link href="/howitworks" className="flex bg-black text-white">
             <Notebook className="mr-2 h-4 w-4" />
             <span>How it works</span>
           </Link>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
-          <Link href="/features" className="flex">
+          <Link href="/features" className="flex bg-black text-white">
             <KeyRound className="mr-2 h-4 w-4" />
             <span>Features</span>
           </Link>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
-          <Link href="/pricing" className="flex">
+          <Link href="/pricing" className="flex bg-black text-white">
             <BadgeDollarSign className="mr-2 h-4 w-4" />
             <span>Pricing</span>
           </Link>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
-          <Link href="/showcase" className="flex">
+          <Link href="/showcase" className="flex bg-black text-white">
             <LayoutGrid className="mr-2 h-4 w-4" />
             <span>Showcase</span>
           </Link>

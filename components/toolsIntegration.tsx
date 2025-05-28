@@ -2,12 +2,12 @@
 
 import React from 'react'
 import Image from 'next/image'
-import icon1 from '@/public/next.svg'
-import icon2 from '@/public/next.svg'
-import icon3 from '@/public/next.svg'
-import icon4 from '@/public/next.svg'
-import icon5 from '@/public/next.svg'
-import icon6 from '@/public/next.svg'
+import icon1 from '@/public/icons8-tools-24.png'
+import icon2 from '@/public/icons8-tools-24.png'
+import icon3 from '@/public/icons8-tools-24.png'
+import icon4 from '@/public/icons8-tools-24.png'
+import icon5 from '@/public/icons8-tools-24.png'
+import icon6 from '@/public/icons8-tools-24.png'
 
 
 const icons = [icon1, icon2, icon3, icon4, icon5, icon6]
@@ -37,7 +37,7 @@ const ToolIntegration = () => {
             <div className="absolute animate-loop-down">
               {loopedIcons.map((icon, idx) => (
                 <div key={`down-${idx}`} className="mb-12 flex justify-center">
-                  <Image src={icon} alt="icon" width={100} height={100} />
+                  <Image src={icon} alt="icon" width={56} height={56} />
                 </div>
               ))}
             </div>
@@ -48,7 +48,7 @@ const ToolIntegration = () => {
             <div className="absolute animate-loop-up">
               {loopedIcons.map((icon, idx) => (
                 <div key={`up-${idx}`} className="mb-12 flex justify-center">
-                  <Image src={icon} alt="icon" width={100} height={100} />
+                  <Image src={icon} alt="icon" width={56} height={56} />
                 </div>
               ))}
             </div>
@@ -59,7 +59,7 @@ const ToolIntegration = () => {
             <div className="absolute animate-loop-down">
               {loopedIcons.map((icon, idx) => (
                 <div key={`down2-${idx}`} className="mb-12 flex justify-center">
-                  <Image src={icon} alt="icon" width={100} height={100} />
+                  <Image src={icon} alt="icon" width={56} height={56} />
                 </div>
               ))}
             </div>

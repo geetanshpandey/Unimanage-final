@@ -26,8 +26,8 @@ export default function RootLayout({
         <body>
           <PageHeader />
           {children}
+          <Footer/>
         </body>
-        <Footer/>
       </html>
     </ClerkProvider>
   );
